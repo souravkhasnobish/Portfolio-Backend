@@ -38,7 +38,7 @@ Thanks for your message: "${message}"
 
 I appreciate you reaching out. I'll get back to you as soon as I can!
 
-– Chandan`,
+– Sourav`,
     };
 
     await transporter.sendMail(mailOptions);
