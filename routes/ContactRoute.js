@@ -46,7 +46,7 @@ I appreciate you reaching out. I'll get back to you as soon as I can!
     res.status(201).json({ message: "Contact saved and email sent!" });
   } catch (error) {
     console.error("Error in POST /contact:", error);
-    
+
     
     res.status(500).json({ message: "Something went wrong", error });
   }
