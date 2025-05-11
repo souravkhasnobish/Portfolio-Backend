@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/contact", contactRoutes); // Now handled from routes/contactRoutes.js
+app.use("api/contact", contactRoutes); // Now handled from routes/contactRoutes.js
 // DB Connection
 mongoose
   .connect(process.env.ATLAS_URL)
@@ -19,9 +19,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // Routes
-app.get("/", (req, res) => {
-  res.redirect("process.env.FRONTEND_URL");
-});
+
 
 // Server Listen
 const PORT = process.env.PORT || 5000;
