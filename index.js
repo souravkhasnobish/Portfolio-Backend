@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Hello from the backend!");
 });
 
-app.use("api/contact", contactRoutes); // Now handled from routes/contactRoutes.js
+app.use("/api/contact", contactRoutes); // Now handled from routes/contactRoutes.js
 // DB Connection
 mongoose
   .connect(process.env.ATLAS_URL)
