@@ -14,7 +14,7 @@ app.use(express.json());
 app.use("/contact", contactRoutes); // Now handled from routes/contactRoutes.js
 // DB Connection
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.ATLAS_URI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
 
