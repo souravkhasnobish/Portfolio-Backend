@@ -19,7 +19,9 @@ mongoose
   .catch((err) => console.log(err));
 
 // Routes
-
+app.get("/", (req, res) => {
+  res.redirect("process.env.FRONTEND_URL");
+});
 
 // Server Listen
 const PORT = process.env.PORT || 5000;
