@@ -10,6 +10,9 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Hello from the backend!");
+});
 
 app.use("api/contact", contactRoutes); // Now handled from routes/contactRoutes.js
 // DB Connection
@@ -19,7 +22,6 @@ mongoose
   .catch((err) => console.log(err));
 
 // Routes
-
 
 // Server Listen
 const PORT = process.env.PORT || 5000;
