@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/contact", contactRoutes); // Now handled from routes/contactRoutes.js
+app.use("/contact", contactRoutes); // Now handled from routes/contactRoutes.js
 // DB Connection
 mongoose
   .connect(process.env.MONGO_URI)
